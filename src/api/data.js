@@ -4,9 +4,20 @@ import axios from "./axios"
 export const getbanner = function () {
     return axios.request({
         url:"banner",
-        method:"get",
-        params:{
-            id:1
+        method:"POST",
+        headers:{
+            "Content-Type":"application/x-www-form-urlencoded"
+        },
+        data:{
+                id:13123
         }
+    })
+}
+
+// 用户名
+export const getUserData=function(){
+    return axios.request({
+        url:"user",
+        method:"get"
     })
 }
