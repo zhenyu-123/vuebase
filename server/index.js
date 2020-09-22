@@ -30,29 +30,29 @@ let express = require('express');
 
 let app = express();
 
-app.use((req, res, next) => {
-    res.append("Access-Control-Allow-Origin", "*")
-    res.append("Access-Control-Allow-headers", "*")
-    next();
-})
+// app.use((req, res, next) => {
+//     res.append("Access-Control-Allow-Origin", "*")
+//     res.append("Access-Control-Allow-headers", "*")
+//     next();
+// })
 
-app.get("/", (req, res) => {
-    res.json({
-        msg: "这是首页"
-    })
-})
+// app.get("/", (req, res) => {
+//     res.json({
+//         msg: "这是首页"
+//     })
+// })
 
-app.post("/banner", (req, res) => {
-    res.json({
-        msg: "这是banner"
-    })
-})
-//pdd
-app.get("/api/homenav", (req, res) => {
-    res.json({
-        msg: "这是首页"
-    })
-})
+// app.post("/banner", (req, res) => {
+//     res.json({
+//         msg: "这是banner"
+//     })
+// })
+// //pdd
+// app.get("/api/homenav", (req, res) => {
+//     res.json({
+//         msg: "这是首页"
+//     })
+// })
 
 // 开启本地服务
 app.listen(3000, () => {
